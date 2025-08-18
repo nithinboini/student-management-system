@@ -16,7 +16,9 @@ import com.example.StudentManagementSystem.entity.Student;
 import com.example.StudentManagementSystem.services.StudentServices;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+// @CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
+
 @RequestMapping("/api")
 public class Studentcontroller {
 	
