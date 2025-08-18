@@ -1,7 +1,7 @@
 // src/components/StudentService.js
 import axios from "axios";
 
-const BASE_URL ="student-management-system-production-5db2.up.railway.app/api/students";
+const BASE_URL ="https://student-management-system-production-5db2.up.railway.app/api/students";
 
 class StudentService {
   getAllStudents() {
