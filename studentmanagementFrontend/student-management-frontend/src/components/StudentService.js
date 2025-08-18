@@ -1,7 +1,7 @@
 // src/components/StudentService.js
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api/students";
+const BASE_URL ="https://student-management-system-production.up.railway.app/api/students";
 
 class StudentService {
   getAllStudents() {
