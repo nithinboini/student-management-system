@@ -8,10 +8,14 @@ const StudentList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    StudentService.getAllStudents().then((res) => {
-      setStudents(res.data);
-    });
-  }, []);
+  StudentService.getAllStudents().then((res) => {
+    console.log("API response:", res.data);
+    setStudents(Array.isArray(res.data) ? res.data : []);
+  }).catch(err => {
+    console.error("API fetch error:", err);
+  });
+}, []);
+
 
   const deleteStudent = (id) => {
     StudentService.deleteStudent(id).then(() => {
